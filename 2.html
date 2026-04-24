@@ -8,6 +8,11 @@
 <body bgcolor="#996600">
     <center>
     <table border="1">
+        <thead>
+            <tr>
+                <th colspan="2">CONTACT INFORMATION</th>
+            </tr>
+        </thead>
         <tbody>
             <th>Name</th>
             <th>details</th>
@@ -16,7 +21,7 @@
                 <td>
                     <ul>
                         <li>Phone: 0675094056</li>
-                         <li>Email: juniourmsafiri@gmail.com</li>
+                         <li>Email: <a href="mailto:juniourmsafiri@gmail.com">juniourmsafiri@gmail.com</a></li>
                           <li>Address: P.O.Box 4693</li>
                     </ul>
                 </td>
@@ -56,7 +61,7 @@
                 <td>
                     <ul>
                         <li>Phone: </li>
-                         <li>Email:</li>
+                         <li>Email: </a></li>
                           <li>Address: </li>
                     </ul>
                 </td>
@@ -65,9 +70,9 @@
                 <td>Jugraki</td>
                 <td>
                     <ul>
-                        <li>Phone: </li>
-                         <li>Email:</li>
-                          <li>Address: </li>
+                        <li>Phone: 0775 520 406</li>
+                         <li>Email:  <a href="mailto:jugraki@gmail.com">jugraki@gmail.com</a></li>
+                          <li>Address: P.O.Box 25756</li>
                     </ul>
                 </td>
             </tr>
@@ -99,6 +104,7 @@
             <textarea placeholder="enter your message here....." rows="5" cols="30"></textarea>
         </p>
          <p>
+            <label for="gender"><b>Gender:</b></label><br>
             <label for="male">male</label>
             <input type="radio" id="male" name="gender" value="male">
             <label for="female">female</label>
@@ -106,27 +112,19 @@
         </p>
        
         <p>
-             <h5>INTERESTS:</h5>
-            <table>
-                <tr>
-                    <td>
-                        <label for="swim">swimming</label>
-            <input type="checkbox" id="swim" value="swimming">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="kick">kickboxing</label>
-                        <input type="checkbox" id="kick" value="swimming">
-                    </td>
-                </tr>
-                 <tr>
-                    <td>
-                        <label for="fun">dancing</label>
-                        <input type="checkbox" id="fun" value="dancing">
-                    </td>
-                </tr>
-            </table>
+              <label for="interest"><b>Interest:</b></label><br>
+        <input type="checkbox" id="interest1" name="interest" value="sports">
+        <label for="interest1">Sports</label><br>
+        <input type="checkbox" id="interest2" name="interest" value="music">
+        <label for="interest2">Music</label><br>
+        <input type="checkbox" id="interest3" name="interest" value="music">
+        <label for="interest3">Kickboxing</label><br>
+        <input type="checkbox" id="interest4" name="interest" value="music">
+        <label for="interest4">Swimming</label><br>
+        <input type="checkbox" id="interest5" name="interest" value="travel">
+        <label for="interest5">Travel</label><br><br>
+
+        <input type="submit" value="Submit"> <input type="reset" value="Reset"> 
         </p>
     </fieldset>
     </form>
