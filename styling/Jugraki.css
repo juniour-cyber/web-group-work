@@ -24,7 +24,7 @@ body {
 
 /* --- Header & Hero Section --- */
 .header-title-section {
-    background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.1)), url('images/Jugraki Img File/mon.jpg');
+    background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.1)), url('mon.jpg');
     background-size: cover;
     background-position: center;
     border: 2px solid var(--accent);
