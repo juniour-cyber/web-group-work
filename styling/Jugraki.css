@@ -1,0 +1,237 @@
+/* Extenal Style Sheet */
+
+/* --- Variables for a Cyberpunk Tech Feel --- */
+:root {
+    --accent: #00ff41; /* Classic Terminal Green */
+    --accent-glow: rgba(0, 255, 65, 0.3);
+    --bg-darker: #0a0a0a;
+    --bg-card: #141414;
+    --text-dim: #a0a0a0;
+}
+
+/* --- Global Styles --- */
+body {
+     background-color: var(--bg-darker);
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    background-image: radial-gradient(circle, rgb(9, 12, 179), #4682b4, #808080);
+    background-attachment: fixed;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.5;
+    
+}
+
+/* --- Header & Hero Section --- */
+.header-title-section {
+    background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(0, 0, 255, 0.1)), url('images/Jugraki Img File/mon.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 2px solid var(--accent);
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px var(--accent-glow);
+    text-align: center;
+    color: white;
+    
+}
+
+
+.special {
+    color: #fff;
+    font-size: 3.5rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+     text-transform: uppercase;
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+  margin-bottom: 20px;
+       transition: transform 0.3s ease-in-out;
+}
+
+.special:hover {
+color: var(--accent);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* --- Profile & Biography --- */
+.background {
+    /* Glassmorphism Effect */
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #fff;
+     border-left: 5px solid var(--accent);
+    padding: 20px;
+     margin: 20px auto; 
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 15px;
+}
+
+   
+
+.profile-pic img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    filter: sepia(100%) hue-rotate(90deg) brightness(80%); /* Makes your photo look like a green scan */
+    transition: filter 0.3s ease;
+    transition: transform 0.4s ease;
+}
+
+.profile-pic img:hover {
+    transform: rotate(5deg) scale(1.1);
+    filter: none;
+}
+
+
+/* --- Tables & Education --- */
+.table, table[border="1"] {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+     border: 1px solid #333;
+    font-size: 0.9rem;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+   
+.table th {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+     text-transform: uppercase;
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    border-bottom: 2px solid var(--accent);
+}
+
+.table td {
+    padding: 12px;
+    border-bottom: 1px solid #222;
+    text-align: center;
+    color: #000;
+    background-color: #f9f9f9;
+}
+
+.table tr:hover {
+    background-color: #1a1a1a;
+    transform: scale(1.01);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    color: var(--accent);
+}
+
+/* --- Skills & Lists --- */
+ul {
+    margin-left: 40px;
+    line-height: 1.8;
+    list-style: none;
+}
+
+
+ul ul {
+    font-size: 1em; 
+    color: #ddd;
+}
+
+li em {
+    font-weight: bold;
+}
+
+ul li::before {
+    content: "> ";
+    color: var(--accent);
+    font-weight: bold;
+}
+
+
+/* --- Gallery Section --- */
+h4 {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #fff;
+     border-left: 4px solid var(--accent);
+    padding-left: 15px;
+    margin-top: 60px;
+}
+
+.gallery {
+    width: 50%;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    border: none; /* Removed table border for modern look */
+}
+
+.gallery td {
+    padding: 10px;
+    border: none;
+}
+
+.gallery img {
+    border-radius: 10px;
+     border: 1px solid #333;
+    transition: 0.3s;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+     width: 100%;
+    height: auto;
+    opacity: 0.8;
+}
+
+.gallery img:hover {
+    filter: brightness(1.2);
+     border-color: var(--accent);
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+
+/* --- Links & Footer --- */
+a {
+    color: var(--accent);
+    text-decoration: none;
+    border: 1px solid transparent;
+    padding: 2px 5px;
+    font-weight: bold;
+    transition: color 0.3s;
+    transition: 0.3s;
+}
+
+a:hover {
+    background-color: var(--accent);
+    color: #000;
+     transform: translateX(10px);
+    transition: transform 0.3s;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background: rgba(0,0,0,0.1);
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    margin-top: 50px;
+}
+
+footer img {
+    max-width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    opacity: 0.7;
+}
+footer img:hover {
+    opacity: 1;
+}
