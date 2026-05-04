@@ -30,6 +30,7 @@ body {
     padding: 15px 40px;
     border-bottom: 1px solid #1e293b;
     z-index: 1000;
+    border-radius:50px
 }
 
 /* LOGO */
