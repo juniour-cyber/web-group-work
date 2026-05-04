@@ -1,0 +1,53 @@
+/* 1. Styling for the Contacts Table */
+table {
+    border-collapse: collapse; /* Removes double borders */
+    width: 80%;
+    margin: 20px auto;
+    background-color: white; 
+}
+
+th, td {
+    padding: 15px; /*improve good appearance of table content */
+    text-align: left;
+    border: 1px solid #664400;
+}
+th {
+    background-color: #8b5a00; /* Darker brown for header */
+    color: white;
+}
+
+/* 2. Styling for the Form and Fields */
+form {
+    width: 70%;/*sets how wide the form will fit into the page*/
+    margin: 30px auto;/*sets spacing between form and other page elements*/
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px; /* Advanced feature: Rounded corners */
+}
+
+input[type="text"], 
+input[type="email"], 
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box; /* Ensures padding doesn't conflict with the container size */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* 3. Button Styling */
+input[type="submit"], 
+input[type="reset"] {
+    padding: 10px 20px;
+    background-color: #664400;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover, 
+input[type="reset"]:hover {
+    background-color: #4a3200; /* Darker on hover */
+}
