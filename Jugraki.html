@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PERSONAL PORTFOLIO</title>
-    <link rel="stylesheet" href="styling/Jugraki.css">
-    <p><h1><b>PERSONAL PORTFOLIO</b></h1></p>
+    <link rel="stylesheet" type="text/css" href="Jugraki.css">
+    
+</head>
+
+
+<body>
+    <section class="header-title-section">
+<p><h1 class="special"><b>PERSONAL PORTFOLIO</b></h1></p>
     <!-- Table with the profile picture column & the biography column -->
-    <table class="15" width="100%">
+    <table cellpadding="15" width="100%" class="background">
         <tr valign="top">
             <td width="20%">
                 <p><b>[Jugraki]</b></p>
                 <!-- Replace the src attribute with the actual path to your profile picture -->
-                <img src="images/Jugraki Img File/JUGY.jpg" alt="Profile Picture" width="150" height="150">
+                <p class="profile-pic"><img src="images/Jugraki Img File/JUGY.jpg" alt="Profile Picture" width="150" height="150"></p>
             </td>
             <td width="80%">
                 <p><b>BIOGRAPHY</b></p>
@@ -21,8 +28,9 @@
             </td>
         </tr>
     </table>
-</head>
-<body>
+        </section>
+    <hr>
+
     <!-- List of Skills -->
    <p><b>SKILLS</b></p>
    <ul>
@@ -38,7 +46,7 @@
        </li>
    </ul>
    <!-- Table layout for the Education background --> 
-   <table border="1">
+   <table border="1" class="table">
        <thead><b>EDUCATION BACKGROUND</b></thead>
        <th><p><b>LEVEL</b></p></th>
        <th><p><b>SCHOOL</b></p></th>
@@ -85,15 +93,15 @@
          </li>
     </ul>
     <!-- Image section -->
-    <p><b>GALLERY</b></p>
-    <table border="1">
+    <h4><b>GALLERY</b></h4>
+    <table border="1" class="gallery">
         <tr>
             <td><img src="images/Jugraki Img File/profile.jpg" alt="Image 1" width="110" height="110"></td>
             <td><img src="images/Jugraki Img File/mon.jpg" alt="Image 2" width="110" height="110"></td>
          <td><img src="images/Jugraki Img File/swimming.jpg" alt="Image 3" width="110" height="110"></td>
         </tr>
         <tr>
-            <td colspan="3"><img src="images/Jugraki Img File/are.jpg" alt="Image 4" width="410" height="200"></td>
+            <td colspan="3"><img src="images/Jugraki Img File/are.jpg" alt="Image 4" width="210" height="200"></td>
         </tr>
     </table>
     <!-- Favourate links -->
