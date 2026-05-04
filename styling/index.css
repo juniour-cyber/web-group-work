@@ -1,0 +1,23 @@
+ul {
+     list-style-type: none;
+     margin: 0%;
+     padding: 0%;
+     background-color: grey;
+     display: flex;
+}
+ul li a {
+     display: block;
+     color: aqua;
+     padding: 13px 15px;/* this is a shorthand property*/
+}
+ul li a:hover {
+    background-color: black;
+    opacity: 0.6;/* decreases intensity of the black color*/
+}
+div{
+    background-color: aqua;
+margin: auto;
+}
+.profile-pic{
+    box-shadow: 5px 5px 4px aqua;/* horizontal,vertical shadow,blur radius,color*/
+}
