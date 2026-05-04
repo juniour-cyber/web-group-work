@@ -21,3 +21,9 @@ margin: auto;
 .profile-pic{
     box-shadow: 5px 5px 4px aqua;/* horizontal,vertical shadow,blur radius,color*/
 }
+/* 
+body{
+    background-image: url("images/udsmlogo.png");
+background-repeat: no-repeat;
+} 
+*/
