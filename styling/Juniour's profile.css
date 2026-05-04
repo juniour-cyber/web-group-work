@@ -1,0 +1,210 @@
+/* --- Style Sheet --- */
+
+/* --- Root Variables for easy customization --- */
+:root {
+    --primary: #00d2ff;
+    --secondary: #3a7bd5;
+    --bg-dark: #050505;
+    --glass: rgba(255, 255, 255, 0.03);
+    --border: rgba(255, 255, 255, 0.1);
+    --text-main: #f0f0f0;
+}
+
+/* --- Base Setup --- */
+body {
+    background: var(--bg-dark);
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(58, 123, 213, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(0, 210, 255, 0.15) 0px, transparent 50%);
+    color: var(--text-main);
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+/* --- Typography --- */
+h1 {
+    font-size: clamp(2rem, 8vw, 4rem);
+    font-weight: 800;
+    text-align: center;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 50px;
+}
+
+h4 {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--primary);
+     border-left: 4px solid #38bdf8;
+    padding-left: 15px;
+    margin-top: 60px;
+}
+
+
+
+/* --- The Education Table --- */
+table[border="1"] {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    background: #1e293b;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+th {
+    background: #334155;
+    color: #38bdf8;
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    text-align: left;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+tr:hover {
+    background: rgba(56, 189, 248, 0.1);
+}
+
+
+/* --- Image Styling --- */
+img[alt="My Photo"], .profile-pic img {
+    border-radius: 20px;
+    filter: grayscale(20%);
+    transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 0 30px rgba(0, 210, 255, 0.2);
+}
+
+img[alt="My Photo"]:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 0 50px rgba(0, 210, 255, 0.4);
+}
+
+/* --- Biography Text --- */
+pre {
+    font-family: 'JetBrains Mono', monospace; /* Great for CS students */
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 12px;
+    color: #cbd5e1;
+    border-left: 2px solid var(--secondary);
+}
+
+
+/* --- Clean Tables --- */
+table[border="1"] {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+    margin: 30px 0;
+}
+
+th {
+    text-align: left;
+    padding: 20px;
+    color: var(--primary);
+    border-bottom: 2px solid var(--border);
+}
+
+td {
+    padding: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    color: var(--primary);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* --- Lists & Skill Tags --- */
+ul li {
+    list-style: none;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+ul li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+/* --- Gallery Grid --- */
+.gallery td {
+    padding: 10px;
+    border: none;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    opacity: 0.8;
+}
+
+.gallery img:hover {
+    opacity: 1;
+}
+
+/* --- Links --- */
+a {
+    color: var(--text-main);
+    text-decoration: none;
+    position: relative;
+    padding: 2px 5px;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: var(--primary);
+    transition: 0.3s;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+/* --- Footer Glow --- */
+footer {
+    margin-top: 80px;
+    text-align: center;
+opacity: 0.6;
+    transition: 0.3s;
+}
+
+footer img {
+    filter: brightness(0.8) drop-shadow(0 0 10px rgba(255,255,255,0.1));
+    
+}
+
+footer:hover {
+    opacity: 1;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--border), transparent);
+}
