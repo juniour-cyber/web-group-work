@@ -1,0 +1,178 @@
+/* MY CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #1a2a3a;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Container concept - using body as wrapper */
+header, section, footer {
+    background-color: white;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+header:hover, section:hover, footer:hover {
+    transform: translateY(-3px);
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    background: linear-gradient(135deg, #0b2b3b, #1a4a5f);
+    color: white;
+}
+
+header img {
+    border-radius: 50%;
+    border: 4px solid #ffb347;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 10px 0;
+}
+
+header em {
+    color: #ffd966;
+    font-style: italic;
+}
+
+hr {
+    margin: 15px 0;
+    border: none;
+    height: 2px;
+    background: #ffb347;
+    width: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Section headings */
+h2 {
+    color: #1a4a5f;
+    border-left: 5px solid #ffb347;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+}
+
+/* Skills - nested lists */
+ul ul {
+    margin-left: 25px;
+    list-style-type: circle;
+}
+
+li {
+    margin: 8px 0;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #1a4a5f;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #f9f2e0;
+}
+
+/* Links */
+a {
+    color: #ff8c42;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #cc6b2c;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #1e2f3a;
+    color: #ccc;
+    padding: 15px;
+}
+
+footer a img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+footer p {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+/* Responsive kwa simu */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    header, section, footer {
+        padding: 15px;
+    }
+    
+    header h1 {
+        font-size: 1.6rem;
+    }
+    
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    
+    th {
+        display: none;
+    }
+    
+    td {
+        position: relative;
+        padding-left: 50%;
+    }
+    
+    td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+    }
+}
