@@ -13,7 +13,8 @@
 body {
      background-color: var(--bg-darker);
     color: #ffffff;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace; /* Monospace for that "coder" look */
+    /* Updated gradient for a smoother look */
     background-image: radial-gradient(circle, rgb(9, 12, 179), #4682b4, #808080);
     background-attachment: fixed;
     margin: 0;
@@ -91,6 +92,17 @@ color: var(--accent);
 
 
 /* --- Tables & Education --- */
+#sort-year-btn{
+    margin-left:15px; 
+    cursor:pointer;
+}
+
+.table caption {
+    color: white; 
+    font-weight: bold; 
+    padding: 10px;
+}
+
 .table, table[border="1"] {
     width: 90%;
     margin: 20px auto;
@@ -176,7 +188,7 @@ h4 {
 }
 
 .gallery td {
-    padding: 10px;
+    padding: 5px;
     border: none;
 }
 
@@ -234,4 +246,60 @@ footer img {
 }
 footer img:hover {
     opacity: 1;
+}
+
+/* dfgdhhjf */
+/* Skills toggle */
+.skill-item-header{
+    cursor:pointer; 
+    font-weight:bold;
+}
+.skill-details { display: none; }
+.skill-details.is-visible { display: block; }
+
+/* Hobbies truncate fallback setup */
+.hobby-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* limits description blocks to two lines */
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+.hobby-desc.expanded {
+    display: block;
+    overflow: visible;
+}
+
+/* Scroll to top display default style */
+#scroll-top-btn { 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    padding: 10px 15px; 
+    cursor: pointer; 
+    background-color: var(--accent); 
+    color: black; 
+    border: none; 
+    font-weight: bold; 
+    border-radius: 5px;
+    opacity: 0; pointer-events: none; transition: opacity 0.3s; 
+}
+#scroll-top-btn.btn-visible { opacity: 1; pointer-events: auto; }
+
+/* Lightbox base overlay rules */
+.lightbox-overlay {
+    position: fixed; z-index: 999; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8); display: none; align-items: center; justify-content: center;
+}
+.lightbox-active { display: flex; }
+
+/* darkmode toggle */
+/* Add this snippet to handle Light Mode styling variations when toggled */
+body.dark-mode {
+    background-image: radial-gradient(circle, #0f1115, #1c1f26, #000000);
+    color: #ffffff;
+}
+
+/* Base style for Light Mode (Default variant when class is absent) */
+body {
+    transition: background 0.4s ease, color 0.4s ease;
 }
