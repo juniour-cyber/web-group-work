@@ -1,3 +1,4 @@
+<!-- Jugraki's Personal Portfolio html file -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,117 +7,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PERSONAL PORTFOLIO</title>
     <link rel="stylesheet" type="text/css" href="styling/Jugraki.css">
-    
 </head>
 
-
 <body>
+    <div style="text-align: right; padding: 10px;">
+        <button id="theme-toggle" class="hobby-toggle-btn">Toggle Theme</button>
+    </div>
+
     <section class="header-title-section">
-<p><h1 class="special"><b>PERSONAL PORTFOLIO</b></h1></p>
-    <!-- Table with the profile picture column & the biography column -->
-    <table cellpadding="15" width="100%" class="background">
-        <tr valign="top">
-            <td width="20%">
-                <p><b>[Jugraki]</b></p>
-                <!-- Replace the src attribute with the actual path to your profile picture -->
-                <p class="profile-pic"><img src="images/Jugraki Img File/JUGY.jpg" alt="Profile Picture" width="150" height="150"></p>
-            </td>
-            <td width="80%">
-                <p><b>BIOGRAPHY</b></p>
-                <p>This is a brief biography about myself. I am passionate about web development and design, and<br> I enjoy creating visually appealing and user-friendly websites. In my free time,<br> I like to explore new technologies and work on personal projects to enhance my skills.   
-                </p>    
-            </td>
-        </tr>
-    </table>
-        </section>
+        <h1 class="special"><b>PERSONAL PORTFOLIO</b></h1>
+        <table cellpadding="15" width="100%" class="background">
+            <tr valign="top">
+                <td width="20%">
+                    <p><b>[Jugraki]</b></p>
+                    <p class="profile-pic">
+                        <img src="images/Jugraki Img File/JUGY.jpg" alt="Profile Picture" class="lightbox-trigger" width="150" height="150">
+                    </p>
+                </td>
+                <td width="80%">
+                    <p><b>BIOGRAPHY</b></p>
+                    <p>This is a brief biography about myself. I am passionate about web development and design, and<br> I enjoy creating visually appealing and user-friendly websites. In my free time,<br> I like to explore new technologies and work on personal projects to enhance my skills.</p>    
+                </td>
+            </tr>
+        </table>
+    </section>
     <hr>
 
-    <!-- List of Skills -->
-   <p><b>SKILLS</b></p>
-   <ul>
-       <li>Adapdability</li>
-       <li>Basic IT Troubleshooting</li>
-       <li>
-        <p>Programming</p>
-        <!-- Nested list showing programming languages the person is familiar with -->
-        <ol>
-            <li>Python</li>
-            <li>JavaScript</li> 
-        </ol>
-       </li>
-   </ul>
-   <!-- Table layout for the Education background --> 
-   <table border="1" class="table">
-       <thead><b>EDUCATION BACKGROUND</b></thead>
-       <th><p><b>LEVEL</b></p></th>
-       <th><p><b>SCHOOL</b></p></th>
-       <th><p><b>YEAR</b></p></th>
-       <tr>
-           <td><p>UNIVERSITY</p></td>
-           <td><p>UDSM</p></td>
-           <td><p>2025-CURRENT</p></td>
-       </tr>
-       <tr>
-           <td><p>A-LEVEL</p></td>
-           <td><p>ILBORU HIGH SCHOOL</p></td>
-           <td><p>2023-2025</p></td>
-       </tr>
-       <tr>
-           <td><p>O-LEVEL</p></td>
-           <td><p>WAJA BOYS SECONDARY SCHOOL</p></td>
-           <td><p>2019-2022</p></td>
-       </tr>
-       <tr>
-           <td><p>PRIMARY</p></td>
-           <td><p>DIAMOND PRIMARY SCHOOL</p></td>
-           <td><p>2012-2018</p></td>
-       </tr>
-   </table>
-   <!-- Hobbies/Interests List & Their descriptions -->
-   <p><b>HOBBIES/INTERESTS</b></p> 
-    <ul>
+    <p><b>SKILLS</b> (Click a skill to expand details)</p>
+    <ul class="skills-container">
+        <li class="skill-item">
+            <div class="skill-item-header">Adaptability</div>
+            <p class="skill-details">Thriving in dynamic environments by quickly adjusting to new tools, feedback loops, and changing project requirements.</p>
+        </li>
+        <li class="skill-item">
+            <div class="skill-item-header">Basic IT Troubleshooting</div>
+            <p class="skill-details">Diagnosing and resolving fundamental hardware configurations, operating system bugs, and local networking faults.</p>
+        </li>
+        <li class="skill-item">
+            <div class="skill-item-header">Programming</div>
+            <div class="skill-details">
+                <p>Developing structural solutions using multi-paradigm design languages:</p>
+                <ol>
+                    <li>Python</li>
+                    <li>JavaScript</li> 
+                </ol>
+            </div>
+        </li>
+    </ul>
+
+    <table border="1" class="table" id="education-table">
+        <caption>
+            EDUCATION BACKGROUND 
+            <button id="sort-year-btn">Sort by Year (▲)</button>
+        </caption>
+        <thead>
+            <tr>
+                <th><p><b>LEVEL</b></p></th>
+                <th><p><b>SCHOOL</b></p></th>
+                <th><p><b>YEAR</b></p></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><p>UNIVERSITY</p></td>
+                <td><p>UDSM</p></td>
+                <td class="year-col">2025 - Current</td>
+            </tr>
+            <tr>
+                <td><p>A-LEVEL</p></td>
+                <td><p>ILBORU HIGH SCHOOL</p></td>
+                <td class="year-col">2023 - 2025</td>
+            </tr>
+            <tr>
+                <td><p>O-LEVEL</p></td>
+                <td><p>WAJA BOYS SECONDARY SCHOOL</p></td>
+                <td class="year-col">2019 - 2022</td>
+            </tr>
+            <tr>
+                <td><p>PRIMARY</p></td>
+                <td><p>DIAMOND PRIMARY SCHOOL</p></td>
+                <td class="year-col">2012 - 2018</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><b>HOBBIES/INTERESTS</b></p> 
+    <ul class="hobbies-container">
          <li>
             <p>Technological exploration</p>
-            <P>Interest in discovering and learning about new technologies and their applications, so as to improve my practical skills and stay updated with the latest trends.</P>
+            <p class="hobby-desc">Interest in discovering and learning about new technologies and their applications, leads to my hands-on habit of actively testing new software, hardware, and digital tools. I interact with this hobby by dedicating weekly time to small experiments—such as installing a new framework, configuring a Raspberry Pi, or testing an AI model. I follow online tutorials, join tech forums, and document my findings in a personal log. Through trial and error, debugging, and iterative learning, I move from curiosity to practical skill. This direct engagement keeps me updated with emerging trends and continuously improves my real-world technical abilities.</p>
+            <button class="hobby-toggle-btn">Read More</button>
          </li>
          <li>
             <p>Coding/Programming Practice</p>
-            <P>Interest in practicing and improving my programming skills through hands-on projects and problem-solving.</P>
+            <p class="hobby-desc">This is my active routine of sharpening programming skills through consistent, hands-on coding. By solving challenges on platforms like LeetCode or HackerRank, building small personal projects (e.g., a to-do app or a web scraper), and contributing to open-source repositories. But also refactor old code, debug errors, and learn new languages or frameworks by actually writing and testing code, not just watching tutorials. This direct, iterative practice strengthens my problem-solving abilities, reinforces syntax and logic, and keeps me confident in writing efficient, functional code</p>
+            <button class="hobby-toggle-btn">Read More</button>
          </li>
          <li>
             <p>Swimming</p>
-            <P>Engaged in regular swimming sessions to improve my cardiovascular health and overall fitness.</P>
+            <p class="hobby-desc">Swimming is my favourite sport and my regular physical activity for boosting cardiovascular health and overall fitness. I visit the pool 3–4 times per week, where I follow structured sessions—warming up with freestyle, alternating between sprints and endurance laps, and cooling down with breaststroke or backstroke. I track my lap counts, rest intervals, and stroke techniques using a waterproof fitness watch. To stay motivated and measure progress, I set small goals like swimming an extra lap each week or improving my 500m time. This consistent, immersive practice strengthens my heart, lungs, and muscles while providing a low-impact, full-body workout.</p>
+            <button class="hobby-toggle-btn">Read More</button>
          </li>
          <li>
             <p>Fitness & Personal Well-being</p>
-            <P>Engaged in regular physical exercise and maintaining a healthy lifestyle to support both my physical and mental well-being.</P>
+            <p class="hobby-desc">I am engaged in regular physical exercise and maintaining a healthy lifestyle by following a weekly routine—mixing strength training, cardio, and flexibility exercises like bodyweight workouts, jogging. I use a fitness tracker to monitor my steps, heart rate, and sleep quality, and I meal-prep balanced nutrition to support energy levels. I also dedicate time for rest, hydration, and mindfulness practices like stretching or deep breathing. This integrated approach helps me manage stress, improve focus, and sustain long-term energy, keeping both my body and mind in good condition.</p>
+            <button class="hobby-toggle-btn">Read More</button>
          </li>
     </ul>
-    <!-- Image section -->
+
     <h4><b>GALLERY</b></h4>
     <table border="1" class="gallery">
         <tr>
-            <td><img src="images/Jugraki Img File/profile.jpg" alt="Image 1" width="110" height="110"></td>
-            <td><img src="images/Jugraki Img File/mon.jpg" alt="Image 2" width="110" height="110"></td>
-         <td><img src="images/Jugraki Img File/swimming.jpg" alt="Image 3" width="110" height="110"></td>
+            <td><img src="images/Jugraki Img File/profile.jpg" class="lightbox-trigger" alt="Image 1" width="110" height="110"></td>
+            <td><img src="images/Jugraki Img File/mon.jpg" class="lightbox-trigger" alt="Image 2" width="110" height="110"></td>
+            <td><img src="images/Jugraki Img File/swimming.jpg" class="lightbox-trigger" alt="Image 3" width="110" height="110"></td>
         </tr>
         <tr>
-            <td colspan="3"><img src="images/Jugraki Img File/are.jpg" alt="Image 4" width="210" height="200"></td>
+            <td colspan="3"><img src="images/Jugraki Img File/are.jpg" class="lightbox-trigger" alt="Image 4" width="210" height="200"></td>
         </tr>
     </table>
-    <!-- Favourate links -->
+
     <p><b>FAVORITE LINKS</b></p>
     <ul>
         <li><a href="https://www.instagram.com">Instagram</a></li>
         <li><a href="https://www.google.com">Chrome</a></li>
-        <li><a href="https://www.youtube.com"><td><img src="images/Jugraki Img File/youtub.jpg" alt="Image Link 1" width="90" height="90"></a></li>
-        <li><a href="https://www.github.com"><td><img src="images/Jugraki Img File/github.jpg" alt="Image Link 2" width="90" height="90"></a></li>
+        <li><a href="https://www.youtube.com"><img src="images/Jugraki Img File/youtub.jpg" alt="Image Link 1" width="90" height="90"></a></li>
+        <li><a href="https://www.github.com"><img src="images/Jugraki Img File/github.jpg" alt="Image Link 2" width="90" height="90"></a></li>
     </ul>
-     <hr>
+    <hr>
+
     <footer>
- <a href="index.html">
-         <img src="images/homepageicon.png" height="200" width="1100" alt="Home screen link">
-    </a>
+        <a href="index.html">
+             <img src="images/homepageicon.png" height="200" width="1100" alt="Home screen link">
+        </a>
     </footer>
+
+    <button id="scroll-top-btn">↑ Top</button>
+
+    <script src="javascript/Jugraki.js"></script>
 </body>
 </html>
