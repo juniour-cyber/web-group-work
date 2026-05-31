@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christensen's profile</title>
+    <script src="script.js" defer></script>
     <style>
-        
         body {
             background-color: #0d1117;
             color: #c9d1d9;
@@ -13,32 +13,52 @@
             margin: 0;
             padding: 40px;
             line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        h1, p, b {
+        /* Light Mode Theme Styles */
+        body.light-mode {
+            background-color: #f6f8fa;
+            color: #24292f;
+        }
+
+        h1, p, b, h3 {
             color: #58a6ff;
+            transition: color 0.3s;
         }
 
-         /*LAYOUT STYLING*/
+        body.light-mode h1, 
+        body.light-mode p, 
+        body.light-mode b, 
+        body.light-mode h3 {
+            color: #0969da;
+        }
+
+        /* LAYOUT STYLING */
         .container {
             max-width: 900px;
             margin: auto;
             background-color: #161b22;
             padding: 30px;
             border: 2px solid #30363d;
-            /* ADVANCED: Rounded Corners & Shadows */
             border-radius: 15px;
             box-shadow: 0 0 20px rgba(0, 255, 65, 0.1); 
+            transition: background-color 0.3s, border-color 0.3s;
         }
 
-        /*IMAGE STYLING */
+        body.light-mode .container {
+            background-color: #ffffff;
+            border-color: #d0d7de;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+
+        /* IMAGE STYLING */
         img {
             border: 2px solid #30363d;
-            border-radius: 10px; /* ADVANCED: Rounded Corners */
-            transition: transform 0.3s ease, border-color 0.3s ease; /* ADVANCED: Transitions */
+            border-radius: 10px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
-        /* Hover Effect on Profile & Gallery */
         img:hover {
             transform: scale(1.05); 
             border-color: #00ff41;
@@ -62,6 +82,16 @@
             border: 1px solid #30363d;
             background-color: #0d1117;
             border-radius: 8px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        body.light-mode .edu-table {
+            background-color: #f6f8fa;
+            border-color: #d0d7de;
+        }
+
+        body.light-mode tr[style*="background-color"] {
+            background-color: #eaeef2 !important;
         }
 
         /* LINK STYLING */
@@ -71,18 +101,13 @@
             transition: all 0.3s ease;
         }
 
+        body.light-mode a {
+            color: #1a7f37;
+        }
+
         a:hover {
             text-decoration: underline;
             text-shadow: 0 0 8px #00ff41;
-        }
-
-        /*Skills list */
-        pre {
-            background-color: #000;
-            padding: 15px;
-            border-radius: 5px;
-            color: #8b949e;
-            border-left: 3px solid #00ff41;
         }
 
         hr {
@@ -90,6 +115,10 @@
             height: 1px;
             background: #30363d;
             margin: 20px 0;
+        }
+
+        body.light-mode hr {
+            background: #d0d7de;
         }
 
         footer {
@@ -102,12 +131,108 @@
             height: auto;
             border-radius: 20px;
         }
+
+        /* INTERACTIVE UI ELEMENTS STYLING */
+        .header-ui {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-ui {
+            background: #21262d;
+            color: #c9d1d9;
+            border: 1px solid #30363d;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.2s ease;
+        }
+
+        body.light-mode .btn-ui {
+            background: #eaeef2;
+            color: #24292f;
+            border-color: #d0d7de;
+        }
+
+        .btn-ui:hover {
+            border-color: #58a6ff;
+        }
+
+        .skills-wrapper {
+            margin-top: 10px;
+        }
+
+        .skill-node {
+            background-color: #21262d;
+            border-left: 3px solid #00ff41;
+            padding: 8px 12px;
+            margin: 6px 0;
+            border-radius: 0 6px 6px 0;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        body.light-mode .skill-node {
+            background-color: #eaeef2;
+        }
+
+        .skill-details {
+            display: none;
+            padding: 10px;
+            background: #0d1117;
+            color: #8b949e;
+            margin-top: 5px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        body.light-mode .skill-details {
+            background: #f6f8fa;
+            color: #57606a;
+        }
+
+        .skill-details.show {
+            display: block;
+        }
+
+        .hobby-text {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            margin-bottom: 5px;
+        }
+
+        .hobby-text.expanded {
+            display: block;
+        }
+
+        #scrollTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            background-color: #00ff41;
+            color: #0d1117;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>PERSONAL PORTFOLIO</h1>
+    <div class="header-ui">
+        <h1>PERSONAL PORTFOLIO</h1>
+        <button class="btn-ui" id="themeToggleBtn">Toggle Mode</button>
+    </div>
 
     <table width="100%">
         <tr valign="top">
@@ -117,51 +242,88 @@
             <td width="75%">
                 <hr>
                 <p><b>BIOGRAPHY:</b></p>
-                <pre>
-I am a first-year college student currently pursuing my studies at the
-University of Dar es Salaam. I have a strong foundation in science and
-mathematics, and I am dedicated to advancing my technical knowledge
-through higher education.
+                <p style="font-size: 0.95em; padding-left: 5px;">
+                    I am a first-year college student currently pursuing my studies at the
+                    University of Dar es Salaam. I have a strong foundation in science and
+                    mathematics, and I am dedicated to advancing my technical knowledge
+                    through higher education.
+                </p>
 
-MY SKILLS:
-   - Web Development (HTML)
-   - Programming
-       - C++
-       - C
-       - JavaScript
-                </pre>
+                <p><b>MY SKILLS (Click items to toggle details):</b></p>
+                <div class="skills-wrapper">
+                    <div class="skill-node">
+                        <b>- Web Programming</b>
+                        <div class="skill-details">I have knowledge in html,css ,javascript and php making me capable of creating web applications , hosting them troubleshooting for errors and maintaining and running the server in production .</div>
+                    </div>
+                    <div class="skill-node">
+                        <b>- Ubuntu</b>
+                        <div class="skill-details">I have knowledge of basic ubuntu commmands and bash programming language making it possible to run servers and also aid in scripting and automation .</div>
+                    </div>
+                    <div class="skill-node">
+                        <b>- C Programming</b>
+                        <div class="skill-details">I have learnt beginner c through which . enables me to create console programs .</div>
+                    </div>
+                    <div class="skill-node">
+                        <b>- C++ & JavaScript</b>
+                        <div class="skill-details">Knowledge of object-oriented paradigms and modern web development architectures.</div>
+                    </div>
+                </div>
             </td>
         </tr>
     </table>
 
-    <h3>EDUCATION BACKGROUND</h3>
-    <table class="edu-table">
-        <tr style="background-color: #21262d;">
-            <th>Level</th>
-            <th>School</th>
-            <th>Year</th>
-        </tr>
-        <tr>
-            <td>High School</td>
-            <td>Ahmes Secondary School</td>
-            <td>2025</td>
-        </tr>
-        <tr>
-            <td>University</td>
-            <td>University of Dar es Salaam</td>
-            <td>2026-present</td>
-        </tr>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+        <h3>EDUCATION BACKGROUND</h3>
+        <button class="btn-ui" id="sortEduBtn">Sort by Year (Asc)</button>
+    </div>
+    
+    <table class="edu-table" id="eduTable">
+        <thead>
+            <tr style="background-color: #21262d;">
+                <th>Level</th>
+                <th>School</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Primary School</td>
+                <td>Moga Primary School</td>
+                <td>2018</td>
+            </tr>
+            <tr>
+                <td>Secondary</td>
+                <td>Ahmes Secondary School</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td>High School</td>
+                <td>Ahmes Secondary School</td>
+                <td>2025</td>
+            </tr>
+            <tr>
+                <td>University</td>
+                <td>University of Dar es Salaam</td>
+                <td>2026-present</td>
+            </tr>
+        </tbody>
     </table>
 
     <h3>HOBBIES:</h3>
     <ol>
         <li>
             <b>Football</b>
-            <p>I am a passionate fan of the sport and a dedicated supporter of Real Madrid.</p>
+            <div class="hobby-text">
+                I am a passionate fan of the sport and a dedicated supporter of Real Madrid. I track match fixtures globally, analyze team formations, strategy dynamics, and watch classic matches during spare intervals.
+            </div>
+            <button class="btn-ui hobby-toggle-btn">Read More</button>
         </li>
-        <li>
+        <li style="margin-top: 15px;">
             <b>Jogging</b>
-            <p>I enjoy jogging to keep myself active and healthy.</p>
+            <div class="hobby-text">
+                I enjoy jogging to keep myself active and healthy. Running regular outdoor routes helps me clear my mind, develop higher mental stamina, and build standard physical health consistency required for academic work.
+            </div>
+            <button class="btn-ui hobby-toggle-btn">Read More</button>
         </li>
     </ol>
 
@@ -193,6 +355,8 @@ MY SKILLS:
         </a>
     </footer>
 </div>
+
+<button id="scrollTopBtn">↑ Top</button>
 
 </body>
 </html>
