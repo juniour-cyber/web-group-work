@@ -1,5 +1,5 @@
 // Tracks the current sorting order state for the education table
-let sortorder = true;
+let isascending = true;
 
 // Toggles between dark mode and light mode CSS classes
 function toggleTheme() {
@@ -20,12 +20,12 @@ function sortEducationTable() {
     rows.sort((rowA, rowB) => {
         const yearA = parseInt(rowA.cells[2].textContent) || 0;
         const yearB = parseInt(rowB.cells[2].textContent) || 0;
-        return sortorder ? yearA - yearB : yearB - yearA;
+        return isascending ? yearA - yearB : yearB - yearA;
     });
 
     rows.forEach(row => tbody.appendChild(row));
-    document.getElementById('sortEduBtn').textContent = `Sort by Year (${sortorder ? 'Desc' : 'Asc'})`;
-    sortorder = !sortorder;
+    document.getElementById('sortEduBtn').textContent = `Sort by Year (${isascending ? 'Desc' : 'Asc'})`;
+    isascending = !isascending;
 }
 
 // Expands or collapses long hobby description texts on click
