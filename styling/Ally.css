@@ -142,6 +142,12 @@ footer a img {
     margin-top: 10px;
 }
 
+footer a img:hover {
+    opacity: 0.8;
+    transform: scale(1.02);
+    box-shadow: 0 0 10px #ffb347;
+} 
+
 footer p {
     margin-top: 15px;
     font-size: 0.9rem;
