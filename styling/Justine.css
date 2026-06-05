@@ -1,0 +1,230 @@
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        color: tan;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 40px auto;
+        background: #ffffff;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h1, h2, h3, h4 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    img {
+        display: block;
+        margin: 15px auto;
+        border-radius: 10px;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    dl {
+        margin-left: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+
+    table th, table td {
+        padding: 10px;
+        text-align: center;
+    }
+
+    table th {
+        background-color: #007BFF;
+        color: white;
+    }
+
+    table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    ul, ol {
+        margin-left: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #00ff00;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+/* SKILL TOGGLE */
+
+.skill-item {
+    cursor: pointer;
+    margin: 10px 0;
+    padding: 8px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.skill-item:hover {
+    background-color: #444;
+}
+
+.skill-details {
+    margin-top: 5px;
+    padding-left: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* DARK MODE */
+
+.dark-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.dark-mode a {
+    color: #007BFF;
+}
+
+
+/* SORT BUTTON */
+
+#sortBtn {
+    display: block;
+    margin: 10px auto;
+    padding: 8px 15px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#sortBtn:hover {
+    background-color: #0056b3;
+}
+
+
+/* READ MORE / READ LESS */
+
+.hobbyText {
+    max-height: 40px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.hobbyText.expanded {
+    max-height: 300px;
+}
+
+.readMoreBtn {
+    margin-top: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+}
+
+.readMoreBtn:hover {
+    background-color: #0056b3;
+}
+
+
+/* SCROLL TO TOP BUTTON */
+
+#topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50%;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#topBtn:hover {
+    background-color: #0056b3;
+}
+
+
+/* DARK/LIGHT MODE BUTTON */
+
+#themeBtn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+#themeBtn:hover {
+    background-color: #6fb71c;
+}
+
+
+/* IMAGE LIGHTBOX */
+
+#lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+
+    justify-content: center;
+    align-items: center;
+}
+
+#lightboxImage {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+#closeLightbox {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    padding: 10px;
+    border: none;
+    background: red;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* PROFILE IMAGE EFFECT */
+
+#profileImage {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#profileImage:hover {
+    transform: scale(1.05);
+}
