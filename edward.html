@@ -17,10 +17,12 @@
 <!-- NAVBAR -->
 <nav class="navbar">
 
-    <div class="logo">Edward.dev</div>
+    <div class="logo">EDDY.DEV</div>
+
+<button id="themeToggle">Dark Mode</button>
 
     <ul class="nav-links">
-        <li><a href="#about">About</a></li>
+      <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#hobbies">Hobbies</a></li>
         <li><a href="#education">Education</a></li>
@@ -63,10 +65,35 @@
     <h2 class="section-title">MY SKILLS</h2>
 
     <ul class="list">
-        <li>C Programming</li>
-        <li>Java</li>
-        <li>Problem Solving</li>
-        <li>Team Work</li>
+
+        <li class="skill-item">
+            C Programming
+            <p class="skill-detail">
+                I can develop programs using the C language.
+            </p>
+        </li>
+
+        <li class="skill-item">
+            Java
+            <p class="skill-detail">
+                I understand Java OOP concepts.
+            </p>
+        </li>
+
+        <li class="skill-item">
+            Problem Solving
+            <p class="skill-detail">
+                I enjoy solving real-world problems.
+            </p>
+        </li>
+
+        <li class="skill-item">
+            Team Work
+            <p class="skill-detail">
+                I work effectively with other team members.
+            </p>
+        </li>
+
     </ul>
 
 </section>
@@ -110,6 +137,11 @@
         </tr>
 
     </table>
+    <!--SORT BUTTON  -->
+<button id="sortBtn">Sort by Year</button>
+</section>
+
+
 
 
 <!-- HOBBIES -->
@@ -121,22 +153,38 @@
 
         <li>
             <strong>Attending Educational Seminars</strong>
-            <p>I enjoy learning from seminars and workshops.</p>
+            <p>
+                I enjoy learning from seminars
+                <span class="more-text">and workshops that improve my knowledge and skills.</span>
+            </p>
+            <button class="toggleBtn">Read More</button>
         </li>
 
         <li>
             <strong>Volunteering</strong>
-            <p>I help in community activities and charity work.</p>
+            <p>
+                I help in community activities
+                <span class="more-text">and participate in charity programs that support society.</span>
+            </p>
+            <button class="toggleBtn">Read More</button>
         </li>
 
         <li>
             <strong>Entrepreneurship</strong>
-            <p>I explore business ideas and innovation.</p>
+            <p>
+                I explore business ideas
+                <span class="more-text">and focus on innovation, startups, and financial independence.</span>
+            </p>
+            <button class="toggleBtn">Read More</button>
         </li>
 
         <li>
             <strong>Technology Exploration</strong>
-            <p>I learn new technologies and their applications.</p>
+            <p>
+                I learn new technologies
+                <span class="more-text">including AI, web development, and modern software tools.</span>
+            </p>
+            <button class="toggleBtn">Read More</button>
         </li>
 
     </ul>
@@ -144,7 +192,9 @@
 </section>
 
 
-</section>
+
+
+
 
 <!-- GALLERY -->
 <section id="gallery" class="section">
@@ -208,9 +258,31 @@
         <img src="images/homepageicon.png" class="footer-icon" alt="Home">
     </a>
 
-    <p>© 2026 Edward Lugoye Misungwi</p>
+    <p id="p">© 2026 Edward Lugoye Misungwi</p>
 
 </footer>
+
+
+
+
+<!-- LIGHTBOX OVERLAY -->
+<div id="lightbox" class="lightbox">
+    
+    <span id="closeBtn">&times;</span>
+    <!-- Close button (X) -->
+
+    <img id="lightboxImg" class="lightbox-img">
+    <!-- Image that will be shown in big view -->
+
+</div>
+
+<!-- SCROLL TO TOP BUTTON -->
+<button id="topBtn">↑ Top</button>
+
+
+<script src="javascript/edward.js"></script>
+
+
 
 </body>
 </html>
