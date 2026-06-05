@@ -4,83 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-    body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        background-color: black;
-        color: tan;
-    }
-     
-    .container {
-        max-width: 800px;
-        margin: 40px auto;
-        background: #ffffff;
-        padding: 25px;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    h1, h2, h3, h4 {
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-    img {
-        display: block;
-        margin: 15px auto;
-        border-radius: 10px;
-    }
-
-    p {
-        text-align: justify;
-    }
-
-    dl {
-        margin-left: 20px;
-    }
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 10px;
-    }
-
-    table th, table td {
-        padding: 10px;
-        text-align: center;
-    }
-
-    table th {
-        background-color: #007BFF;
-        color: white;
-    }
-
-    table tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
-
-    ul, ol {
-        margin-left: 20px;
-    }
-
-    a {
-        text-decoration: none;
-        color: #007BFF;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-    </style>
+    <link rel="stylesheet" href="styling/Justine.css">
 </head>
 <body>
+    <button id="themeBtn">🌙 Dark / Light Mode</button>
     <h2>Personal portfolio</h2>
     <h4>Personal information</h4>
     <h1><b>Jastine Nyantoga</b></h1>
-    <img src="images/Justine Img File/Justine img.jpeg" width="185" height="190" >
+    <img 
+    id="profileImage"
+        src="images/Justine Img File/Justine img.jpeg"
+        width="185"
+        height="190"
+        alt="Jastine">
     <p>Computer Science Student - University of Dar es Salaam</p> 
   
     <h4><b>Registration Number:</b>2025-04-09196</h4>
@@ -89,28 +25,30 @@
 
     <p>I am currently pursuing my Bachelor of Science in Computer Science where I study subjects like Discrete Mathematics,Computer Organization and Architecture, C programming and Web development. These courses have helped me build a strong foundation in both theoretical and practical sides of computing.</p>
 
-    <h3>Skills</h3>
-    <dl>
-        <dt>1. Programming</dt>
-        <dd>-C programming</dd>
-        <dd>-HTML5</dd>
-        <dd>-Java</dd>
-    </dl>
-    <dl>
-        <dt>2. Soft skills</dt>
-        <dd>-Teamwork</dd>
-        <dd>-Time management</dd>
-        <dd>-Communication</dd>
-    </dl>
+    <div class="skill-item">
+    Programming
+    <div class="skill-details hidden">
+        C Programming, HTML5, Java
+    </div>
+</div>
+
+<div class="skill-item">
+    Soft Skills
+    <div class="skill-details hidden">
+        Teamwork, Time Management, Communication
+    </div>
+</div>
     <h3>Education</h3>
-    <table border="1">
-        <!--row 1-->
+     <button id="sortBtn">Sort Years</button>
+
+    <table id="educationTable" border="1">
+
         <tr>
             <th>Level</th>
          <th>School/Institution</th>
             <th>Year</th>
         </tr>
-        <!--row 2-->
+       
         <tr>
             <td>University level</td>
             <td>University of Dar es Salaam</td>
@@ -133,8 +71,19 @@
         </tr>
     </table>
     <h3>Hobbies & Interests</h3>
+    <div>
+        <p class="hobbyText">
+            I enjoy reading books because they improve my knowledge,
+            communication skills and understanding of different technologies.
+            Reading inspires creativity and helps me stay informed.
+        </p>
+
+        <button class="readMoreBtn">
+            Read More
+        </button>
+    </div>
     <ol>
-        <li>Reading books</li>
+    
         <li>Coding</li>
         <li>Listening to music</li>
         <li>Football</li>
@@ -143,7 +92,7 @@
 
 <ul>
     <li>
-        <a href="https://in/jastine-mabagala-98243137b">
+        <a href="https://www.linkedin.com/in/jastine-mabagala-98243137b">
             My Linkedin
         </a>
     </li>
@@ -158,6 +107,17 @@
         </a>
     </li>
 </ul>
+<button id="topBtn">⬆ Top</button>
+
+    <div id="lightbox" class="hidden">
+
+        <button id="closeLightbox">✖</button>
+
+        src="images/Justine Img File/Justine img.jpeg"
+        <img id="lightboxImage" src="images/Justine Img File/Justine img.jpeg" alt="Lightbox Image">
+
+    </div>
+
+<script src="javascript/Justine.js" defer></script>
 </body>
 </html>
-   
