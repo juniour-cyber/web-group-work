@@ -209,10 +209,8 @@ hr {
     background: linear-gradient(to right, transparent, var(--border), transparent);
 }
 
-/* ==========================================================================
-   SIMPLE CSS EXTENSIONS FOR JAVASCRIPT LOGIC DEPENDENCIES
-   ========================================================================== */
 
+  /* SIMPLE CSS EXTENSIONS FOR JAVASCRIPT LOGIC DEPENDENCIES*/
 /* --- 1. Dark Mode Alternative Theme --- */
 /* When JavaScript adds the 'dark-mode' class to the body, these styles apply */
 body.dark-mode {
@@ -309,7 +307,7 @@ body.dark-mode {
 
 
 /* Navigation,Scrolling To Top Button */
-#scroll-top-btn {
+#scroll {
     display: none;             /* Hidden by default until user scrolls down */
     position: fixed;           /* Floats on top of the page screen view */
     bottom: 20px;
@@ -323,6 +321,6 @@ body.dark-mode {
 }
 
 /* When JavaScript adds 'btn-visible', make the floating button appear */
-#scroll-top-btn.btn-visible {
+#scroll.btn-visible {
     display: block;
 }
