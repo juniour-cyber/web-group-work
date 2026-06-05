@@ -1,0 +1,218 @@
+body {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 40px;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light Mode Theme Styles */
+body.light-mode {
+    background-color: #f6f8fa;
+    color: #24292f;
+}
+
+h1, p, b, h3 {
+    color: #58a6ff;
+    transition: color 0.3s;
+}
+
+body.light-mode h1, 
+body.light-mode p, 
+body.light-mode b, 
+body.light-mode h3 {
+    color: #0969da;
+}
+
+/* LAYOUT STYLING */
+.container {
+    max-width: 900px;
+    margin: auto;
+    background-color: #161b22;
+    padding: 30px;
+    border: 2px solid #30363d;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.1); 
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+body.light-mode .container {
+    background-color: #ffffff;
+    border-color: #d0d7de;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+/* IMAGE STYLING */
+img {
+    border: 2px solid #30363d;
+    border-radius: 10px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05); 
+    border-color: #00ff41;
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
+}
+
+/* TABLE STYLING */
+table {
+    border-collapse: separate;
+    border-spacing: 15px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.edu-table {
+    border: 1px solid #30363d;
+    background-color: #0d1117;
+    border-radius: 8px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+body.light-mode .edu-table {
+    background-color: #f6f8fa;
+    border-color: #d0d7de;
+}
+
+body.light-mode tr[style*="background-color"] {
+    background-color: #eaeef2 !important;
+}
+
+/* LINK STYLING */
+a {
+    color: #00ff41;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+body.light-mode a {
+    color: #1a7f37;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-shadow: 0 0 8px #00ff41;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #30363d;
+    margin: 20px 0;
+}
+
+body.light-mode hr {
+    background: #d0d7de;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* INTERACTIVE UI ELEMENTS STYLING */
+.header-ui {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-ui {
+    background: #21262d;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+body.light-mode .btn-ui {
+    background: #eaeef2;
+    color: #24292f;
+    border-color: #d0d7de;
+}
+
+.btn-ui:hover {
+    border-color: #58a6ff;
+}
+
+.skills-wrapper {
+    margin-top: 10px;
+}
+
+.skill-node {
+    background-color: #21262d;
+    border-left: 3px solid #00ff41;
+    padding: 8px 12px;
+    margin: 6px 0;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+body.light-mode .skill-node {
+    background-color: #eaeef2;
+}
+
+.skill-details {
+    display: none;
+    padding: 10px;
+    background: #0d1117;
+    color: #8b949e;
+    margin-top: 5px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+body.light-mode .skill-details {
+    background: #f6f8fa;
+    color: #57606a;
+}
+
+.skill-details.show {
+    display: block;
+}
+
+.hobby-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-bottom: 5px;
+}
+
+.hobby-text.expanded {
+    display: block;
+}
+
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    background-color: #00ff41;
+    color: #0d1117;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}

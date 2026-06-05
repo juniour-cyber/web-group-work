@@ -4,110 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christensen's profile</title>
-    <style>
-        
-        body {
-            background-color: #0d1117;
-            color: #c9d1d9;
-            font-family: 'Courier New', Courier, monospace;
-            margin: 0;
-            padding: 40px;
-            line-height: 1.6;
-        }
-
-        h1, p, b {
-            color: #58a6ff;
-        }
-
-         /*LAYOUT STYLING*/
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background-color: #161b22;
-            padding: 30px;
-            border: 2px solid #30363d;
-            /* ADVANCED: Rounded Corners & Shadows */
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 255, 65, 0.1); 
-        }
-
-        /*IMAGE STYLING */
-        img {
-            border: 2px solid #30363d;
-            border-radius: 10px; /* ADVANCED: Rounded Corners */
-            transition: transform 0.3s ease, border-color 0.3s ease; /* ADVANCED: Transitions */
-        }
-
-        /* Hover Effect on Profile & Gallery */
-        img:hover {
-            transform: scale(1.05); 
-            border-color: #00ff41;
-            box-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
-        }
-
-        /* TABLE STYLING */
-        table {
-            border-collapse: separate;
-            border-spacing: 15px;
-            width: 100%;
-            margin-top: 20px;
-        }
-
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-
-        .edu-table {
-            border: 1px solid #30363d;
-            background-color: #0d1117;
-            border-radius: 8px;
-        }
-
-        /* LINK STYLING */
-        a {
-            color: #00ff41;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        a:hover {
-            text-decoration: underline;
-            text-shadow: 0 0 8px #00ff41;
-        }
-
-        /*Skills list */
-        pre {
-            background-color: #000;
-            padding: 15px;
-            border-radius: 5px;
-            color: #8b949e;
-            border-left: 3px solid #00ff41;
-        }
-
-        hr {
-            border: 0;
-            height: 1px;
-            background: #30363d;
-            margin: 20px 0;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        footer img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="styling/Christensen.css">
 </head>
 <body>
 
 <div class="container">
-    <h1>PERSONAL PORTFOLIO</h1>
+    <div class="header-ui">
+        <h1>PERSONAL PORTFOLIO</h1>
+        <button class="btn-ui" id="themeToggleBtn">Toggle Mode</button>
+    </div>
 
     <table width="100%">
         <tr valign="top">
@@ -117,51 +22,88 @@
             <td width="75%">
                 <hr>
                 <p><b>BIOGRAPHY:</b></p>
-                <pre>
-I am a first-year college student currently pursuing my studies at the
-University of Dar es Salaam. I have a strong foundation in science and
-mathematics, and I am dedicated to advancing my technical knowledge
-through higher education.
+                <p style="font-size: 0.95em; padding-left: 5px;">
+                    I am a first-year college student currently pursuing my studies at the
+                    University of Dar es Salaam. I have a strong foundation in science and
+                    mathematics, and I am dedicated to advancing my technical knowledge
+                    through higher education.
+                </p>
 
-MY SKILLS:
-   - Web Development (HTML)
-   - Programming
-       - C++
-       - C
-       - JavaScript
-                </pre>
+                <p><b>MY SKILLS (Click items to toggle details):</b></p>
+                <div class="skills-wrapper">
+                    <div class="skill-node">
+                        <b>- Web Programming</b>
+                        <div class="skill-details">I have knowledge in html,css ,javascript and php making me capable of creating web applications , hosting them troubleshooting for errors and maintaining and running the server in production .</div>
+                    </div>
+                    <div class="skill-node">
+                        <b>- Ubuntu</b>
+                        <div class="skill-details">I have knowledge of basic ubuntu commmands and bash programming language making it possible to run servers and also aid in scripting and automation .</div>
+                    </div>
+                    <div class="skill-node">
+                        <b>- C Programming</b>
+                        <div class="skill-details">I have learnt beginner c through which enables me to create console programs .</div>
+                    </div>
+                    <div class="skill-node">
+                        <b>- C++ & JavaScript</b>
+                        <div class="skill-details">Knowledge of object-oriented paradigms and modern web development architectures.</div>
+                    </div>
+                </div>
             </td>
         </tr>
     </table>
 
-    <h3>EDUCATION BACKGROUND</h3>
-    <table class="edu-table">
-        <tr style="background-color: #21262d;">
-            <th>Level</th>
-            <th>School</th>
-            <th>Year</th>
-        </tr>
-        <tr>
-            <td>High School</td>
-            <td>Ahmes Secondary School</td>
-            <td>2025</td>
-        </tr>
-        <tr>
-            <td>University</td>
-            <td>University of Dar es Salaam</td>
-            <td>2026-present</td>
-        </tr>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+        <h3>EDUCATION BACKGROUND</h3>
+        <button class="btn-ui" id="sortEduBtn">Sort by Year (Asc)</button>
+    </div>
+    
+    <table class="edu-table" id="eduTable">
+        <thead>
+            <tr style="background-color: #21262d;">
+                <th>Level</th>
+                <th>School</th>
+                <th>Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Primary School</td>
+                <td>Moga Primary School</td>
+                <td>2018</td>
+            </tr>
+            <tr>
+                <td>Secondary</td>
+                <td>Ahmes Secondary School</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td>High School</td>
+                <td>Ahmes Secondary School</td>
+                <td>2025</td>
+            </tr>
+            <tr>
+                <td>University</td>
+                <td>University of Dar es Salaam</td>
+                <td>2026-present</td>
+            </tr>
+        </tbody>
     </table>
 
     <h3>HOBBIES:</h3>
     <ol>
         <li>
             <b>Football</b>
-            <p>I am a passionate fan of the sport and a dedicated supporter of Real Madrid.</p>
+            <div class="hobby-text">
+                I am a passionate fan of the sport and a dedicated supporter of Real Madrid. I track match fixtures globally, analyze team formations, strategy dynamics, and watch classic matches during spare intervals.
+            </div>
+            <button class="btn-ui hobby-toggle-btn">Read More</button>
         </li>
-        <li>
+        <li style="margin-top: 15px;">
             <b>Jogging</b>
-            <p>I enjoy jogging to keep myself active and healthy.</p>
+            <div class="hobby-text">
+                I enjoy jogging to keep myself active and healthy. Running regular outdoor routes helps me clear my mind, develop higher mental stamina, and build standard physical health consistency required for academic work.
+            </div>
+            <button class="btn-ui hobby-toggle-btn">Read More</button>
         </li>
     </ol>
 
@@ -194,5 +136,7 @@ MY SKILLS:
     </footer>
 </div>
 
+<button id="scrollTopBtn">↑ Top</button>
+ <script src="javascript/Christensen.js" defer></script>
 </body>
 </html>
