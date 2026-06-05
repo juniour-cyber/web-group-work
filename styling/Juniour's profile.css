@@ -208,3 +208,121 @@ hr {
     height: 1px;
     background: linear-gradient(to right, transparent, var(--border), transparent);
 }
+
+/* ==========================================================================
+   SIMPLE CSS EXTENSIONS FOR JAVASCRIPT LOGIC DEPENDENCIES
+   ========================================================================== */
+
+/* --- 1. Dark Mode Alternative Theme --- */
+/* When JavaScript adds the 'dark-mode' class to the body, these styles apply */
+body.dark-mode {
+    /* !important, tells the browser to stop all other styling for this section 
+    and consider this one*/
+    background: #111111 !important; /* Changes the background color to dark gray */
+    color: #ffffff;                 /* Changes all text color to pure white */
+}
+
+
+/* --- Skills Section Toggle --- */
+/* By default, it hides the details list */
+.skill-details {
+    display: none; 
+}
+
+/* When JavaScript adds 'is-visible', will show the details list */
+.skill-details.is-visible {
+    display: block; 
+}
+
+
+/* --- Hobbies Section (Read More/Less)features --- */
+/* Restricts the text box to a small height and hides any overflow text */
+.hobby-desc {
+    max-height: 40px; 
+    overflow: hidden;
+}
+
+/* When JavaScript adds 'expanded', remove the max-height limit to show everything */
+.hobby-desc.expanded {
+    max-height: none; 
+}
+
+/* Standard styling for your interactive buttons */
+.hobby-toggle-btn, #sort-year-btn, #theme-toggle {
+    background-color: #334155;
+    color: #00d2ff;
+    border: 1px solid #555555; /* Replaced rgba border with a solid gray line */
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+/* --- Gallery Lightbox Popup --- */
+/* Makes the thumbnail images show a pointer finger cursor when hovered */
+.lightbox-trigger {
+    cursor: pointer;
+}
+
+/* This is the black full-screen backdrop screen overlay */
+.lightbox-overlay {
+    display: none;             /* Hidden by default */
+    position: fixed;           /* Stays pinned to the screen even when scrolling */
+    z-index: 1000;             /* Sits on top of all other elements */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000; /* Replaced rgba with solid black. Opacity can be controlled via layout instead */
+}
+
+/* When JavaScript adds 'lightbox-active', make the overlay appear */
+.lightbox-overlay.lightbox-active {
+    display: block;
+}
+
+/* Keeps the inner box neat and holds the close button position */
+.lightbox-content-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-top: 10%;           /* Pushes the window down slightly from the top */
+    max-width: 80%;
+}
+
+/* Formatting for the dynamic enlarged image tag inside the lightbox */
+#lightbox-img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid white;
+}
+
+/* Simple style formatting for the close letter 'X' button */
+.lightbox-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* Navigation,Scrolling To Top Button */
+#scroll-top-btn {
+    display: none;             /* Hidden by default until user scrolls down */
+    position: fixed;           /* Floats on top of the page screen view */
+    bottom: 20px;
+    right: 20px;
+    background-color: #3a7bd5;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* When JavaScript adds 'btn-visible', make the floating button appear */
+#scroll-top-btn.btn-visible {
+    display: block;
+}

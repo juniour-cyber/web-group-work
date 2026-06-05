@@ -9,6 +9,9 @@
 
 
 <body>
+    <header style="text-align: right; padding: 10px; ">
+        <button id="theme-toggle">Change Dark Mode</button>
+    </header>
       <p><h1><b>PERSONAL PORTFOLIO</b></h1></p>
     <!-- Table with the profile picture column & the biography column -->
     <table class="15" width="100%">
@@ -33,22 +36,25 @@
    <hr>
     <!-- List of Skills -->
    <h4>MY SKILLS:</h4>
+   <div class="skills-zone">
    <ul>
        <li>Digital Media Literacy</li>
        <!--this is just a fancy way for saying "social media consumption."-->
        <li>
-        <p>Programming</p>
+       <div class="skill-item-header" style="cursor: pointer; font-weight: bold;">Programming (Click to View)</div>
         <!-- Nested list showing programming languages the person is familiar with -->
-        <ol>
+        <ol class="skill-details">
             <li>Python</li>
             <li>JavaScript</li> 
         </ol>
        </li>
        
    </ul>
+   </div>
 <hr>
+<button id="sort-year-btn">Sort by Year (▲)</button>
    <!-- Table layout for the Education background --> 
-   <table border="1">
+   <table border="1" id="education-table">
     <thead><b>EDUCATION BACKGROUND</b></thead>
 
     <th>level</th>
@@ -58,48 +64,51 @@
     <tr>
         <td>nursery</td>
         <td>saint dominic school</td>
-        <td>2009-2011</td>
+        <td class="year-col">2009</td>
     </tr>
     <tr>
         <td>primary school</td>
         <td>mount everest primary school</td>
-        <td>2012-2018</td>
+        <td class="year-col">2012</td>
     </tr>
     <tr>
         <td>o-level seconday education</td>
         <td>marian boys secondary school</td>
-        <td>2019-2022</td>
+        <td class="year-col">2019</td>
     </tr>
     <tr>
         <td>a-level secondary education</td>
         <td>Saint joseph's cathedral high school</td>
-        <td>2023-2025</td>
+        <td class="year-col">2023</td>
     </tr>
     <tr>
         <td>university</td>
         <td>UDSM</td>
-        <td>2025-present</td>
+        <td class="year-col">2025</td>
     </tr>
    </table>
 <hr>
    <h4>HOBBIES:</h4>
+   <div class="hobbies-section">
    <p>
    <dl>
     <dt>1.swimming</dt>
-    <dd>swimming has always been a fun sport for me, despite not knowing how to swim well.</dd>
-   </dl>
+    <dd class="hobby-desc">swimming has always been a fun sport for me, despite not knowing how to swim well.</dd>
+   <button class="hobby-toggle-btn">Read More</button>
+</dl>
    <dl>
     <dt>2.volunteering works</dt>
-    <dd>This include various charity activities and other social works that aim to improve the welfare of all in our societies</dd>
-   </dl>
+    <dd class="hobby-desc">This include various charity activities and other social works that aim to improve the welfare of all in our societies</dd>
+  <button class="hobby-toggle-btn">Read More</button>
+</dl>
    </p>
-    
+    </div>
    <!-- Image section -->
     <p><b>GALLERY</b></p>
     <table border="1" class="gallery">
         <tr>
-            <td><img src="images/Juniour Img File/volunteer.jpg" height="200" width="170"></td>
-           <td><img src="images/Juniour Img File/beach.jpg" height="200" width="250"></td>
+            <td><img class="lightbox-trigger" src="images/Juniour Img File/volunteer.jpg" height="200" width="170"></td>
+           <td><img class="lightbox-trigger" src="images/Juniour Img File/beach.jpg" height="200" width="250"></td>
         </tr>
     </table>
     <hr>
@@ -116,7 +125,7 @@
          <img src="images/homepageicon.png" height="200" width="1100" alt="Home screen link">
     </a>
     </footer>
-   
-    
+   <button id="scroll" title="Return above">▲ Top</button>
+    <script src = "javascript/Juniour.js" defer></script>
 </body>
 </html>
